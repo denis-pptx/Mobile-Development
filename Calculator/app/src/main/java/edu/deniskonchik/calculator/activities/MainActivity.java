@@ -1,4 +1,4 @@
-package edu.deniskonchik.calculator;
+package edu.deniskonchik.calculator.activities;
 
 import android.os.Bundle;
 import android.view.View;
@@ -7,16 +7,19 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
-
-import net.objecthunter.exp4j.*;
+import androidx.lifecycle.ViewModelProvider;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import edu.deniskonchik.calculator.R;
+import edu.deniskonchik.calculator.models.CalculatorViewModel;
 
 public class MainActivity extends AppCompatActivity {
 
     private TextView resultField;
     private TextView operationField;
+    private CalculatorViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,14 @@ public class MainActivity extends AppCompatActivity {
 
         resultField = findViewById(R.id.resultField);
         operationField = findViewById(R.id.operationField);
+
+        viewModel = new ViewModelProvider(this).get(CalculatorViewModel.class);
+        viewModel.operation.observe(this, operation -> {
+            operationField.setText(operation);
+        });
+        viewModel.result.observe(this, result -> {
+            resultField.setText(result);
+        });
 
         GridLayout gridLayout = findViewById(R.id.buttonGrid);
         for (int i = 0; i < gridLayout.getChildCount(); i++) {
@@ -39,40 +50,29 @@ public class MainActivity extends AppCompatActivity {
     protected void onButtonClick(AppCompatButton button){
         String text = button.getText().toString();
 
-        if (text.equals("sqrt") || text.equals("log2") ||
-                text.equals("log") || text.equals("sin") ||
-                text.equals("cos"))
-        {
-            operationField.append(text + "(");
-        }
-        else if (text.equals("x^y")) {
-            operationField.append("^");
-        }
-        else if (text.equals("AC")) {
-            resultField.setText("");
-            operationField.setText("");
-        }
-        else if (text.equals("back")) {
-            String s = operationField.getText().toString();
-            if (!s.isEmpty()) {
-                operationField.setText(s.substring(0, s.length() - 1));
-            }
-        }
-        else if (text.equals("=")) {
-            String operationText = operationField.getText().toString();
-            if (!operationText.isEmpty()) {
-                try {
-                    Expression expression = new ExpressionBuilder(operationText).build();
-                    double result = expression.evaluate();
-                    resultField.setText(Double.toString(result));
-
-                } catch (Exception exception) {
-                    resultField.setText("Invalid input");
-                }
-            }
-        }
-        else {
-            operationField.append(text);
+        switch (text) {
+            case "sqrt":
+            case "log2":
+            case "log":
+            case "sin":
+            case "cos":
+                viewModel.Append(text + "(");
+                break;
+            case "x^y":
+                viewModel.Append("^");
+                break;
+            case "AC":
+                viewModel.Clear();
+                break;
+            case "back":
+                viewModel.RemoveLast();
+                break;
+            case "=":
+                viewModel.Evaluate();
+                break;
+            default:
+                viewModel.Append(text);
+                break;
         }
     }
 

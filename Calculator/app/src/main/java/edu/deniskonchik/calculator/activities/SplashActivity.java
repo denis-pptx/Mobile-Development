@@ -1,10 +1,12 @@
-package edu.deniskonchik.calculator;
+package edu.deniskonchik.calculator.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import edu.deniskonchik.calculator.R;
 
 public class SplashActivity extends AppCompatActivity {
 
