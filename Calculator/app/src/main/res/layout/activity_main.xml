@@ -35,5 +35,30 @@
             android:text=")"
             style="@style/OptionalOperation" />
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cos"
+            android:text="cos"
+            style="@style/OptionalOperation" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b4"
+            android:text="4"
+            style="@style/Number" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b5"
+            android:text="5"
+            style="@style/Number" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b6"
+            android:text="6"
+            style="@style/Number" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/minus"
+            android:text="-"
+            style="@style/OptionalOperation" />
+
     </GridLayout>
 </LinearLayout>
