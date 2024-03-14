@@ -76,5 +76,21 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("result", resultField.getText().toString());
+        outState.putString("operation", operationField.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        String result = savedInstanceState.getString("result");
+        String operation = savedInstanceState.getString("operation");
+        resultField.setText(result);
+        operationField.setText(operation);
+    }
+
 
 }

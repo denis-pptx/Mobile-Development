@@ -7,49 +7,30 @@
     <TextView
         android:id="@+id/operationField"
         android:text=""
-        style="@style/OperationDisplayVertical" />
+        style="@style/OperationDisplayHorizontal" />
 
     <TextView
         android:id="@+id/resultField"
         android:text=""
-        style="@style/ResultDisplayVertical" />
+        style="@style/ResultDisplayHorizontal" />
 
     <GridLayout
         android:id="@+id/buttonGrid"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:rowCount="6"
-        android:columnCount="5" >
+        android:rowCount="5"
+        android:columnCount="6" >
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/b_sqrt"
-            android:text="sqrt"
-            style="@style/OptionalOperation" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/b_log2"
-            android:text="log2"
-            style="@style/OptionalOperation" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/b_ln"
-            android:text="log"
-            style="@style/OptionalOperation" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/b_left_bracket"
-            android:text="("
-            style="@style/OptionalOperation" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/b_right_bracket"
-            android:text=")"
-            style="@style/OptionalOperation" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/b_pow"
             android:text="x^y"
+            style="@style/OptionalOperation" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b_sqrt"
+            android:text="sqrt"
             style="@style/OptionalOperation" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -78,6 +59,11 @@
             style="@style/OptionalOperation" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b_log2"
+            android:text="log2"
+            style="@style/OptionalOperation" />
+
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/b_7"
             android:text="7"
             style="@style/Number" />
@@ -100,6 +86,11 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/b_cos"
             android:text="cos"
+            style="@style/OptionalOperation" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b_ln"
+            android:text="log"
             style="@style/OptionalOperation" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -128,6 +119,11 @@
             style="@style/OptionalOperation" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b_left_bracket"
+            android:text="("
+            style="@style/OptionalOperation" />
+
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/b_1"
             android:text="1"
             style="@style/Number" />
@@ -150,6 +146,11 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/b_e"
             android:text="e"
+            style="@style/OptionalOperation" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b_right_bracket"
+            android:text=")"
             style="@style/OptionalOperation" />
 
         <androidx.appcompat.widget.AppCompatButton

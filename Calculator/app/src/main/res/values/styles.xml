@@ -30,18 +30,25 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:gravity">center_vertical|end</item>
-    </style>
-    <style name="OperationDisplay" parent="MyDisplayStyle">
-        <item name="android:layout_weight">0.25</item>
         <item name="android:textColor">@color/dark_lava</item>
-        <item name="android:textSize">60sp</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-    <style name="ResultDisplay" parent="MyDisplayStyle">
-        <item name="android:layout_weight">0.15</item>
-        <item name="android:textColor">@color/dark_lava</item>
-        <item name="android:textSize">35sp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="OperationDisplayVertical" parent="MyDisplayStyle">
+        <item name="android:layout_weight">0.25</item>
+        <item name="android:textSize">70sp</item>
+    </style>
+    <style name="OperationDisplayHorizontal" parent="MyDisplayStyle">
+        <item name="android:layout_weight">0.2</item>
+        <item name="android:textSize">40sp</item>
+    </style>
+
+    <style name="ResultDisplayVertical" parent="MyDisplayStyle">
+        <item name="android:layout_weight">0.15</item>
+        <item name="android:textSize">35sp</item>
+    </style>
+    <style name="ResultDisplayHorizontal" parent="MyDisplayStyle">
+        <item name="android:layout_weight">0.125</item>
+        <item name="android:textSize">20sp</item>
+    </style>
 </resources>
