@@ -4,7 +4,7 @@
     <style name="MyButtonStyle">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_columnWeight">1</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">70dp</item>
         <item name="android:textSize">20sp</item>
         <item name="android:maxLines">1</item>
         <item name="android:gravity">center</item>
@@ -14,16 +14,16 @@
     </style>
 
     <style name="MainOperation" parent="MyButtonStyle">
-
+        <item name="android:backgroundTint">@color/milk_coffee</item>
     </style>
 
 
     <style name="OptionalOperation" parent="MyButtonStyle">
-
+        <item name="android:backgroundTint">@color/sepia</item>
     </style>
 
     <style name="Number" parent="MyButtonStyle">
-        <item name="android:backgroundTint">#0000FF</item>
+        <item name="android:backgroundTint">@color/shadows</item>
     </style>
 
 </resources>
