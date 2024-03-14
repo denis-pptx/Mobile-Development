@@ -4,11 +4,22 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <TextView
+        android:id="@+id/operation"
+        android:text="Операция"
+        style="@style/OperationDisplay" />
+
+    <TextView
+        android:id="@+id/result"
+        android:text="Результат"
+        style="@style/ResultDisplay" />
+
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:rowCount="6"
-        android:columnCount="5">
+        android:columnCount="5" >
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/b_sqrt"
