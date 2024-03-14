@@ -5,16 +5,17 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/operation"
-        android:text="Операция"
+        android:id="@+id/operationField"
+        android:text=""
         style="@style/OperationDisplay" />
 
     <TextView
-        android:id="@+id/result"
-        android:text="Результат"
+        android:id="@+id/resultField"
+        android:text=""
         style="@style/ResultDisplay" />
 
     <GridLayout
+        android:id="@+id/buttonGrid"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -33,7 +34,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/b_ln"
-            android:text="ln"
+            android:text="log"
             style="@style/OptionalOperation" />
 
         <androidx.appcompat.widget.AppCompatButton
